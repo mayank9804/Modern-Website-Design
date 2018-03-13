@@ -1,0 +1,464 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+      overflow-x: hidden;
+}
+header{
+      position:fixed;
+      height:120px;
+      background-color: transparent;
+      top:0px;
+      z-index:10;
+      width:100%;
+      transition: 0.5s ease;
+}
+.navbar-left{
+    float:left;
+    height: 100%;
+    width: 30%;
+}
+header .navbar-left #brand-image{
+    margin-left: 8%;
+    padding: 5% 5% 0% 5%;
+    color: #000;
+    width: 109px;
+    height: 100px;
+    font-size: 40px;
+    transition: 0.5s ease;
+}
+.navbar-right{
+    height: 100%;
+    float:right;
+}
+header .navbar-right ul li{
+    list-style: none;
+    display:inline-block;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 300;
+    line-height: 98px;
+    margin-right: 20px;
+    text-align:center;
+    text-decoration: none;
+    color:black;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    transition: 0.5s ease;
+}
+
+
+ header .navbar-right ul a.active li{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    transition: 0.1s ease-in;
+}
+header .navbar-right ul a li:hover{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.scrolled {
+    transition: 0.5s ease;
+}
+      header.scrolled{
+        position:fixed;
+        height:70px;
+        background-color:#444749;
+        top:0px;
+        z-index:10;
+        width:100%;
+        transition: 0.5s ease;
+      }
+
+      header.scrolled .navbar-left #brand-image{
+          margin-left: 8%;
+          padding: 5% 10% 0% 5%;
+          background-color: aqua;
+          text-align: center;
+          color: black;
+          width: 60px;
+          height: 50px;
+          font-size: 30px;
+          transition: 0.5s ease;
+      }
+
+      header.scrolled .navbar-right ul li{
+        list-style: none;
+        display:inline-block;
+        font-size: 15px;
+        padding: 5px;
+        font-weight: 300;
+        line-height: 55px;
+        margin-right: 20px;
+        text-align:center;
+        text-decoration: none;
+        color:white;
+        font-family: sans-serif;
+        letter-spacing: 0.5px;
+        transition: 0.5s ease;
+      }
+      .intro{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color:#fff;
+/*          border-radius: 0px 0px 40% 40%;*/
+      }
+      .intro .fill-background{
+          position: absolute;
+          top:0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          
+/*          Content added*/
+          background-image: url("static/img/coffeeheader.jpg");
+          filter: grayscale(100%);
+          /* transition: 1.35s ease-in-out; */
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          background-position-y:0; 
+          
+/*          border-radius: 0px 0px 50% 50%;*/
+      }
+      .intro .fill-background #overlay{
+          position: absolute;
+          top:0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(166, 164, 216, 0.20);
+/*          border-radius: 0px 0px 50% 50%;*/
+          
+      }
+      .intro #quote{
+          position: absolute;
+          display: block;
+          bottom: 0%;
+          width: 100%;
+          opacity: 0.5;
+          
+      }
+        .intro #quote p{
+            background-color: black;
+            
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Acme';
+            color:white;
+                
+        }
+      .intro #down-button{
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+      }
+      .hoverable-side-navs{
+          position: fixed;
+          top:35%;
+          right:0%;
+          height: 200px;
+          width: 60px;
+          z-index: 2;
+      }
+       .hoverable-side-navs a{
+        display: block;
+        position: absolute;
+        padding: 10px;
+        padding-left: 20px;
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        right: -40px;
+        text-decoration: none;
+        transition: 0.2s ease-in;
+      }
+      .hoverable-side-navs a:hover{
+       right: 0px;
+       transition: 0.2s ease-out;
+     }
+
+
+.practice-content-filler{
+  height: auto;
+    padding-top: 50px;
+}
+.practice-content-filler>h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1%;
+    font-family:'Roboto', sans-serif;
+    font-weight: 700;
+}
+.practice-content-filler p{
+  margin-top:10px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 2%;
+  margin-right: 2%;
+    
+}
+.practice-content-filler:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.practice-content-filler .heading-sep{
+    width: 5%;
+    margin: 0 auto;
+    transition: 0.2s ease-out;
+}
+.practice-content-filler>h1:hover ~ .heading-sep{
+    width: 10%;
+    transition: 0.2s ease-in;
+}
+.design{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    margin: 2%;
+    height: auto;
+    width: 25%;
+    border-radius: 10px;
+    transition: all .4s ease 0s;
+}
+.design > h1{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.design .fa-4x{
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    
+}
+.design >p{
+   margin-top:10px;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%; 
+}
+.design:hover{
+    background-color: #444749;
+    color:white;
+    transform: scale(0.95);
+    transition: .3s ease-in-out;
+}
+.design:hover .fa-4x{
+    color: aqua;
+}
+
+.intro1{
+    height: 50%;
+    width: 100%;
+  background-image: url("static/img/coffeeheader2.jpg");
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.expertise-container{
+    background-color: #F7F7F7;
+}
+.practice-content-filler>#expertise{
+    width:26%;
+    height: 300px;
+    float: left;
+    margin: 2%;
+    margin-left: 3%;
+    margin-right: 2%;
+    padding: 10px;
+/*    background-color: aquamarine;*/
+}
+.practice-content-filler>#expertise>i{
+    width: 100%;
+    text-align: center;
+    color:firebrick;
+}
+.practice-content-filler>#expertise>h2{
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Open Sans', sans-serif; 
+}
+.practice-content-filler>#expertise>p{
+    width:100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.practice-content-filler>#language-snippet{
+    width: 100%;
+    text-align: center;
+    filter: contrast();
+}
+/*
+.language-snippet{
+    margin: 0 auto;
+}*/
+#language-snippet img{
+    display: inline-block;
+    margin-bottom: 1%;
+
+}
+.intro2{
+    height: 50%;
+    width: 100%;
+  background-image: url("static/img/coffeeheader5.jpg");
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contactus #contact-numbers{
+  text-align: center;
+}
+.contactus #contact-numbers > ul{
+  list-style: none;
+}
+.contactus #contact-numbers > ul>pre>li{
+  font-size: 25px;
+  margin-top: 5px;
+}
+#web-quote{
+    background-color: whitesmoke;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.portfolio #render-members{
+  width: auto;
+    margin: 0 auto;
+  margin-top: 2%;
+}
+.portfolio #render-members .members{
+  margin-left: 2%;
+  width: 30%;
+  display: inline-block;
+}
+
+.portfolio #render-members .members>h2{
+  text-align: center;
+}
+.portfolio #render-members .members>p{
+  margin-top: 10px;
+  text-align: center;
+}
+.portfolio #render-members .members>img{
+  display: block;
+  margin-top:2%;
+  margin-bottom:2%;
+  margin: 0px auto;
+
+}
+.portfolio #render-members .members>img:hover{
+  opacity: 0.9;
+    transform: rotate3d(0, 1,0 , 180deg);
+    transition: 1s ;
+}
+#projects{
+    background-color: #F7F7F7;
+    padding-top: 25px;
+}
+
+.carousel{
+              width: 100%;
+/*              background-color: aqua;*/
+              
+          }
+          .project-windows{
+              height: 200px;
+              box-shadow: 8px 8px 20px 1px #2e6da4;
+              width:50%;
+              border-radius: 10px;
+              transition: .2s ease-in-out;
+              background-color: #F2F8FA;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 2%;
+              
+          }
+          .project-windows:hover{
+              box-shadow: 1px 1px 4px #2e6da4;
+              transition: .2s ease-in-out;
+          }
+          .detail-bar{
+              height: 100%;
+              background-color: #FFFFFF;
+              width: 70%;
+              border-bottom-left-radius: 10px;
+              border-top-left-radius: 10px;
+          }
+         
+          
+          .detail-bar .project-name{
+              padding-top: 20px;
+              font-size: 30px;
+              margin-left: 2px;
+          }
+          .detail-bar .btn{
+              margin-top: 5%;
+              margin-left: 3%;
+              background-color: #FFF;
+              color: #2e6da4;
+              margin-bottom: 1%;
+              padding: 10px;
+            font-size: 15px;
+            font-family: serif;
+            border: 1px solid black;
+            border-radius: 7px;
+          }
+          .seperation{
+              margin-left: 3%;
+              margin-right: 3%;
+          }
+       
+footer{
+    height: auto;
+    background-color: #222222;
+    padding-top: 20px;
+    margin-top: 2%;
+}
+
+footer #footer-left{
+    width:50%;
+}
+
+footer > #footer-left #call-us{
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #222222;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 28px;
+}
+#footer-left .cont i{
+    float: left;
+    margin-right: 10px; 
+}
+#footer-left .cont p{
+    color:#8e8e8e;
+    font-size: 15px;
+}
+#footer-left .cont{
+    display: block;
+    margin-top:5px;
+    margin-left: 5px;
+    color: white;
+}
+
+footer>p{
+  text-align: center;
+}
