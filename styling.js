@@ -1,7 +1,7 @@
 
 
 var i =0;
-var arr = ['coffeeheader3.jpg','coffeeheader.jpg'];
+var arr = ['static/img/coffeeheader3.jpg','static/img/coffeeheader.jpg'];
 var arr1 = [];
 //function heroImageHeight(a){
 //  heroImageHeightvalue = a;
